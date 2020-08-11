@@ -2,7 +2,7 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-df = pd.read_csv('C:/Users/genar/OneDrive/Área de Trabalho/Projetos/InDepth_Analysis_Titanic/titanic.csv', engine='python')
+df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
 
 fig = plt.figure(figsize=(8,8))
 
