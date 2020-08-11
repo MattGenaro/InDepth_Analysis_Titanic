@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pandas as pd
-df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
+df = pd.read_csv('/InDepth_Analysis_Titanic_/titanic.csv')
 
 df["Fare"] = df["Fare"].fillna(df["Fare"].dropna().median())
 df["Age"] = df["Age"].fillna(df["Age"].dropna().median())
