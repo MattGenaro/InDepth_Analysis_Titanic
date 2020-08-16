@@ -1,5 +1,5 @@
 # InDepth_Analysis_Titanic_
-An in depth analysis in the titanic incident database with data exploration and many models approach to predict the survival chance.
+An in depth analysis in the Titanic incident database using exploratory and predictive analysis, with many models approach to predict the survival chance.
 
 References:
 
