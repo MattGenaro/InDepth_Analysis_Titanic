@@ -26,7 +26,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #Dataframe of work
-df = pd.read_csv('C:/Users/genar/OneDrive/Área de Trabalho/Projetos/InDepth_Analysis_Titanic/titanic.csv', engine='python')
+df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
 
 #Data cleaning and completing
 df["Fare"] = df["Fare"].fillna(df["Fare"].dropna().median()) #Dropping nan
