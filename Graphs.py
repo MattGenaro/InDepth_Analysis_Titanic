@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 
+#Dataframes
 import pandas as pd
+
+#Visualization
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('C:/Users/genar/OneDrive/Área de Trabalho/Projetos/InDepth_Analysis_Titanic/titanic.csv', engine='python')
+df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
 
 #Plot parameters
 plt.style.use('ggplot')
