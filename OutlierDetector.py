@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 
-#Math tools
+#Linear Algebra
 import numpy as np
+
+#Counts hashable objects
 from collections import Counter
+
 
 #Outlier detection through Tukey method, where 'df' is the dataframe of interest, 'n' is the number of outliers and 'features' are the attributes to detect outliers
 def detect_outliers(df, n, features):
