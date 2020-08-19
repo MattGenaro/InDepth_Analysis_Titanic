@@ -3,13 +3,15 @@
 #Dataframes
 import pandas as pd
 
+#Linear Algebra
+import numpy as np
+
 #Model Algorithms
 from sklearn.ensemble import AdaBoostClassifier, ExtraTreesClassifier, GradientBoostingClassifier, RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier, export
 from sklearn.svm import SVC
 
 #Utilities
-import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV, StratifiedKFold
