@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from Preprocess import outdec
 
-df = pd.read_csv('C:/Users/genar/OneDrive/Área de Trabalho/Projetos/InDepth_Analysis_Titanic/titanic.csv', engine='python')
+df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
 
 #Looking at the basic information about the data
 df.head(5)
