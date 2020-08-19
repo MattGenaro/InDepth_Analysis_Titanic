@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 
+#Dataframes
 import pandas as pd
+
+#Math tools
 import numpy as np
+
+#Text cleaning
 from Preprocess import outdec
 
 df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
