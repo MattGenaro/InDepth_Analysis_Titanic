@@ -30,7 +30,7 @@ df.Survived.min()
 #Ratio of missing values in 'Age' atribute
 total_age = df.Age.count()
 miss_age = df['Age'].isnull().sum()
-print(f'{np.round((miss_age/total_age), 3)}% of missing values in Age attribute')
+print(f'{np.round((miss_age/total_age), 3)*100}% of missing values in Age attribute')
 
 def more_stats(df, features):
     
