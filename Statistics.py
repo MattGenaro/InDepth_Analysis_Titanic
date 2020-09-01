@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
 
+#Data processing
 import pandas as pd
+
+#Linear algebra
 import numpy as np
+
+#Text cleaning
 from Preprocess import outdec
 
-df = pd.read_csv('C:/Users/genar/OneDrive/Área de Trabalho/Projetos/InDepth_Analysis_Titanic/titanic.csv', engine='python')
+
+df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
 
 #Looking at the basic information about the data
 df.head(5)

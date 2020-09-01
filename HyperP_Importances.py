@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
-#Dataframes
+#Data processing
 import pandas as pd
+
+#Linear Algebra
+import numpy as np
 
 #Model Algorithms
 from sklearn.ensemble import AdaBoostClassifier, ExtraTreesClassifier, GradientBoostingClassifier, RandomForestClassifier
@@ -9,7 +12,6 @@ from sklearn.tree import DecisionTreeClassifier, export
 from sklearn.svm import SVC
 
 #Utilities
-import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV, StratifiedKFold
@@ -21,7 +23,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #Dataframe of work
-df = pd.read_csv('C:/Users/genar/OneDrive/Área de Trabalho/Projetos/InDepth_Analysis_Titanic/titanic.csv', engine='python')
+df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
 
 #Data cleaning and completing
 df["Fare"] = df["Fare"].fillna(df["Fare"].dropna().median())
