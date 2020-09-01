@@ -15,11 +15,11 @@ from sklearn.svm import SVC, LinearSVC, NuSVC
 from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
 
 #Utilities
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import cross_val_score, StratifiedKFold
-from sklearn.model_selection import train_test_split
-from Preprocess import outdec
+from sklearn.preprocessing import LabelEncoder #Labels qualitative variables into quantitative ones
+from sklearn.preprocessing import StandardScaler #Normalization
+from sklearn.model_selection import cross_val_score, StratifiedKFold #Cross validation
+from sklearn.model_selection import train_test_split #Split the database into training and test datasets
+from Preprocess import outdec #Outlier detector
 
 #Visualization
 import matplotlib.pyplot as plt
@@ -29,8 +29,7 @@ import seaborn as sns
 df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
 
 #Data cleaning and completing
-df["Fare"] = df["Fare"].fillna(df["Fare"].dropna().median()) #Dropping nan
-df["Age"] = df["Age"].fillna(df["Age"].dropna().median())
+df["Age"] = df["Age"].fillna(df["Age"].dropna().median())  #Dropping nan
 df["Embarked"].mode()
 df["Embarked"] = df["Embarked"].fillna('S')
 outliers_to_drop = outdec.detect_outliers(df, 2, ["Age","SibSp","Parch","Fare"]) #Outliers to drop
