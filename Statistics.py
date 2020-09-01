@@ -21,16 +21,10 @@ df.columns
 df_description = df.describe()
 df.isnull().sum()
 
-#Overral survived amount
-df.Survived.value_counts()
-#Checking mislabeling
-df.Survived.max()
-df.Survived.min()
-
 #Ratio of missing values in 'Age' atribute
-total_age = df.Age.count()
-miss_age = df['Age'].isnull().sum()
-print(f'{np.round((miss_age/total_age), 3)*100}% of missing values in Age attribute')
+print(f'{np.round((df.Age.isnull().sum()/df.shape[0]), 3)*100}% of missing values in Age attribute')
+print(f'{np.round((df.Cabin.isnull().sum()/df.shape[0]), 3)*100}% of missing values in Cabin attribute')
+print(f'{np.round((df.Embarked.isnull().sum()/df.shape[0]), 3)*100}% of missing values in Embarked attribute')
 
 def more_stats(df, features):
     
@@ -46,6 +40,12 @@ df.groupby('Sex')[['Age']].mean()
 more_stats(df, ['Fare'])
 more_stats(df, ['SibSp'])
 more_stats(df, ['Parch'])
+
+#Overral survived amount
+df.Survived.value_counts()
+#Checking mislabeling
+df.Survived.max()
+df.Survived.min()
 
 #Aggregating with data 'group by' per atribute values, to generate new statistic informations
 df.groupby('Sex')[['Survived']].mean()
