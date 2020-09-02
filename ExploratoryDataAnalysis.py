@@ -7,7 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
+df = pd.read_csv('C:/Users/genar/OneDrive/Área de Trabalho/Projetos/InDepth_Analysis_Titanic/titanic.csv', engine='python')
 
 #Plot parameters
 plt.style.use('ggplot')
@@ -41,6 +41,7 @@ for r in range(0, n_rows):
 
 plt.tight_layout()
 fig.savefig('SurvivalChart.png')
+plt.show()
 
 #Dispersion graphic in Age vs. Sex attributes
 sns.scatterplot(df.Sex, df.Age, hue=df['Survived'], alpha=0.5)

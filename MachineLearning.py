@@ -26,7 +26,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #Dataframe of work
-df = pd.read_csv('/InDepth_Analysis_Titanic/titanic.csv')
+df = pd.read_csv('C:/Users/genar/OneDrive/Área de Trabalho/Projetos/InDepth_Analysis_Titanic/titanic.csv', engine='python')
 
 #Data cleaning and completing
 df["Fare"] = df["Fare"].fillna(df["Fare"].dropna().median()) #Dropping nan
@@ -223,7 +223,8 @@ cf_res_acc.sort_values(by='CrossValMeans', ascending=False).iloc[0] #Accuracy
 cf_res_prc.sort_values(by='CrossValMeans', ascending=False).iloc[0] #Precision
 cf_res_rec.sort_values(by='CrossValMeans', ascending=False).iloc[0] #Recall
 cf_res_f1.sort_values(by='CrossValMeans', ascending=False).iloc[0] #F1
-    
+
+cf_res_acc.sort_values(by='CrossValMeans', ascending=False)
 
 plt.style.use('ggplot') #Plot style
 #Plot for every cross validation scores
@@ -244,6 +245,6 @@ sns.barplot("CrossValMeans", "Algorithm", data=cf_res_f1.sort_values(by='CrossVa
 axs[1,1].set_xlabel("Mean F1")
 axs[1,1].set_ylabel(" ")
 axs[1,1].set_title("Cross Validation F1 Scores")
-plt.savefig('CrosValScores.png')
+#plt.savefig('CrosValScores.png')
 plt.show()
 
